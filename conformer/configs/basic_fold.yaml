@@ -1,0 +1,10 @@
+defaults:
+ - base: openfold
+ - msa: null # af_cluster # 
+ - mask: null # random_selected
+
+fasta_dir: null
+template_dir: null
+alignment_dir: null 
+output_dir: null
+structure_dir: structures/

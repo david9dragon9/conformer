@@ -1,0 +1,23 @@
+name: af_cluster
+num_samples: 10
+keyword: null # Keyword to call all generated MSAs.
+i: null # fasta/a3m file of original alignment.
+o: null # name of output directory to write MSAs to.
+n_controls: 10 # Number of control msas to generate (Default 10)
+verbose: false
+
+scan: false # Select eps value on 1/4 of data, shuffled.
+eps_val: null # Use single value for eps instead of scanning.
+resample: false # If included, will resample the original MSA with replacement before writing.
+gap_cutoff: 0.25 # type=float, default=0.25, help='Remove sequences with gaps representing more than this frac of seq.
+min_eps: 3 # default=3, help='Min epsilon value to scan for DBSCAN (Default 3).
+max_eps: 20 # default=20, help='Max epsilon value to scan for DBSCAN (Default 20).
+eps_step: 0.5 # default=.5, help='step for epsilon scan for DBSCAN (Default 0.5).
+min_samples: 3 # default=3, help='Default min_samples for DBSCAN (Default 3, recommended no lower than that).
+
+run_PCA: false # Run PCA on onehot embedding of sequences and store in output_cluster_metadata.tsv
+run_TSNE: false # Run TSNE on onehot embedding of sequences and store in output_cluster_metadata.tsv
+
+use_all_output_paths: true
+use_uniform_output_paths_10: false
+use_uniform_output_paths_100: false

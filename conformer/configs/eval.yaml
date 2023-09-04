@@ -1,0 +1,25 @@
+defaults:
+ - basic_fold@baseline
+ - basic_fold@method
+
+use_env: true
+eval_config: best # ["best", "average"]
+
+pair_path: null
+output_dir: null
+sequence_dict_path: null
+alignment_dir: null
+template_dir: null
+structure_dir: null
+baseline_outputs_dir: null
+method_outputs_dir: null
+leans_path: null
+filtered_pair_path: null
+method_output_paths: null
+
+download_msa: true
+download_structures: true
+eval_baseline: true
+evaluate_rmsd: true
+eval_method: true
+final_evaluation: true

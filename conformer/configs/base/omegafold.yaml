@@ -1,0 +1,47 @@
+name: omegafold
+num_cycle: 10
+
+subbatch_size: null #default=None, type=int,
+# help=
+# """
+# The subbatching number, 
+# the smaller, the slower, the less GRAM requirements. 
+# Default is the entire length of the sequence.
+# This one takes priority over the automatically determined one for 
+# the sequences
+# """
+# )
+
+device: null #default=None, type=str,
+# help=
+# The device on which the model will be running, 
+# default to the accelerator that we can find
+# )
+
+weights_file: null
+# default=None,
+# type=str,
+# help=The model cache to run, default os.path.expanduser("~/.cache/omegafold_ckpt/model.pt")
+# )
+
+weights_url: "https://helixon.s3.amazonaws.com/release1.pt"
+# default="https://helixon.s3.amazonaws.com/release1.pt",
+# type=str,
+# help=The url to the weights of the model
+# )
+
+model: 1 #default=1, type=int,
+# help=The model number to run, current we support 1 or 2
+# )
+
+pseudo_msa_mask_rate: 0.12 #default=0.12, type=float,
+# help=The masking rate for generating pseudo MSAs
+# )
+
+num_pseudo_msa: 15 #default=15, type=int,
+# help=The number of pseudo MSAs
+# )
+
+allow_tf32: true #default=True, type=hipify_python.str2bool,
+# help=if allow tf32 for speed if available, default to True
+# )

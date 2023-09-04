@@ -1,0 +1,6 @@
+name: random_selected
+residue_selection: chosen
+chosen_residues: null
+mask_mode: ignore_residues
+num_samples: 1
+p: 1.0

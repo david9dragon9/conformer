@@ -1,0 +1,4 @@
+name: stochastic
+num_samples: 10
+num_msa_per_sample: 128
+replace_msa: false

@@ -1,0 +1,90 @@
+name: eigenfold
+device: cuda
+precision: float32
+omegafold_num_recycling: 4
+lm_weights_path: null
+
+model_dir: null #type=str, required=True)
+ckpt: null #type=str, required=True)
+
+splits: null #type=str, required=True)
+split_key: null #type=str, default=None)
+inf_mols: 1000 #type=int, default=1000)
+wandb: null #type=str, default=None)
+num_workers: 4 #type=int, default=None)
+p1: null
+p2: null
+
+ode: false #action='store_true: default=False)
+elbo: false #action='store_true: default=False)
+alpha: 0.0 #type=float, default=0)
+beta: 1.0 #type=float, default=1)
+num_samples: 1 #type=int, default=1)
+
+inf_step: 0.5 #type=float, default=0.5)
+elbo_step: 0.2 #type=float, default=0.2)
+inf_type: rate #type=str, choices=['entropy: 'rate'], default='rate')
+max_len: 1500 #type=int, default=1024)
+
+inf_Hf: null #type=float, default=None)
+inf_kmin: null #type=int, default=None)
+inf_tmin: null #type=int, default=None)
+inf_cutoff: null #type=int, default=None)
+
+embeddings_dir: null #type=str, default=None)
+pdb_dir: ./structures #type=str, default=None)
+embeddings_key: name #type=str, default=None, choices=['name: 'reference'])
+
+attention: false
+batch: 1
+commit: c13b11caadb9124b236bab2fc38f5f3ce9810161
+constant_dur: 100000.0
+cuda_diffuse: false
+data_skip: true
+decay_dur: 500000.0
+dry_run: false
+epochs: 100
+inf_freq: 1
+inference_mode: true
+limit_mols: null
+lin_nf: 1
+lin_self: false
+lm_edge_dim: 128
+lm_node_dim: 256
+lr: 0.0003
+lr_end: 1
+lr_start: 1
+no_edge_embs: false
+no_radius_sqrt: false
+order: 1
+parity: true
+print_freq: 100
+radius_emb_dim: 50
+radius_emb_max: 50
+radius_emb_type: gaussian
+resi_conv_layers: 6
+resi_fc_dim: 128
+resi_ns: 32
+resi_ntps: 16
+resi_ntpv: 4
+resi_nv: 4
+resi_pos_emb_dim: 16
+resume: null
+save_freq: 1
+sde_a: 0.20775623268698062
+sde_b: 0
+sde_weight: 1
+sh_lmax: 2
+t_emb_dim: 32
+t_emb_type: sinusoidal
+time: 1679575156475
+tmax: 1000000.0
+tmin: 0.001
+train_Hf: 2
+train_cutoff: 5
+train_kmin: 5
+train_rmsd_max: 0.0
+train_skew: 0
+train_tmin: 0.01
+warmup_dur: 10000.0
+workdir: ./workdir
